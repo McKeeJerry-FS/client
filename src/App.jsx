@@ -1,6 +1,8 @@
 const Jobify = () => {
   return (
-    <div>Jobify</div>
+    <div>
+      <h1>Jobify App</h1>
+    </div>
   )
 }
 

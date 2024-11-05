@@ -6,7 +6,12 @@ import {
   Login,
   DashboardLayout,
   Error,
-  About
+  About,
+  Stats,
+  AllJobs,
+  AddJob,
+  Admin,
+  Profile
 } from "./pages"
 
 const router = createBrowserRouter([
@@ -30,6 +35,28 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <DashboardLayout />,
+        children: [
+          {
+            index: true,
+            element: <AddJob />,
+          },
+          {
+            path: 'stats',
+            element: <Stats />,
+          },
+          {
+            path: 'all-jobs',
+            element: <AllJobs />,
+          },
+          {
+            path: 'profile',
+            element: <Profile />,
+          },
+          {
+            path: 'admin',
+            element: <Admin />,
+          }
+        ]
       },
       {
         path: "about",
@@ -37,6 +64,7 @@ const router = createBrowserRouter([
       },
     ]
   },
+
 ]);
 
 const Jobify = () => {

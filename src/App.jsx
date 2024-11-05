@@ -6,6 +6,7 @@ import {
   Login,
   DashboardLayout,
   Error,
+  About
 } from "./pages"
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <DashboardLayout />,
+      },
+      {
+        path: "about",
+        element: <About />
       },
     ]
   },
